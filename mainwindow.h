@@ -21,6 +21,9 @@ private:
 private slots:
     void number_check();
     void on_dot_clicked();
+    void calculations();
+    void on_equally_clicked();
+    void on_CE_clicked();
 };
 
 #endif // MAINWINDOW_H
