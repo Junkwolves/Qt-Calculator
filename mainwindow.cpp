@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    this->setWindowTitle("Calculator");
+
     ui->statusBar->showMessage("Pre-release. V 1.0  ");
 
     connect(ui->zero,SIGNAL(clicked()),this,SLOT(number_check()));
@@ -73,23 +75,6 @@ void MainWindow::calculations()
     ui->multiply->setChecked(false);
 
     any_button->setChecked(true);
-
-    if(ui->plus->isChecked())
-    {
-        ui->result->setText("+");
-    }
-    else if(ui->minus->isChecked())
-    {
-        ui->result->setText("-");
-    }
-    else if(ui->divide->isChecked())
-    {
-        ui->result->setText("/");
-    }
-    else if(ui->multiply->isChecked())
-    {
-        ui->result->setText("*");
-    }
 }
 
 void MainWindow::on_dot_clicked()
